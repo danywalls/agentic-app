@@ -1,104 +1,145 @@
 # My Agentic App
 
-Una aplicación de chat con IA que combina Angular con Genkit para crear un asistente inteligente de soporte al cliente.
+An AI chat application that combines Angular with Genkit to create an intelligent customer support assistant.
 
-## 🏗️ Arquitectura
+## 🏗️ Architecture
 
 - **Frontend**: Angular 20 + Kendo UI Conversational Components
 - **Backend**: Node.js + TypeScript + Google Genkit + Express
-- **IA**: Google Gemini 2.5 Flash
+- **AI**: Google Gemini 2.5 Flash
 
-## �� Instalación y Configuración
+## 🚀 Installation and Setup
 
-### Prerrequisitos
+### Prerequisites
 
 - Node.js 18+
-- npm o yarn
-- Clave API de Google AI
+- npm or yarn
+- Google AI API Key
 
-### 1. Configuración del Backend
+### Quick Start
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd my-agentic-app
+
+# Install all dependencies and setup environment
+npm run setup
+
+# Edit backend/.env and add your GOOGLE_GENAI_API_KEY
+# Then start both backend and frontend in development mode
+npm run dev
+```
+
+### Manual Setup
+
+#### 1. Backend Setup
 
 ```bash
 cd backend
 
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Configurar variables de entorno
+# Setup environment variables
 cp .env.example .env
-# Editar .env y agregar tu GOOGLE_GENAI_API_KEY
+# Edit .env and add your GOOGLE_GENAI_API_KEY
 ```
 
-### 2. Configuración del Frontend
+#### 2. Frontend Setup
 
 ```bash
 cd my-angular-chat-ui
 
-# Instalar dependencias
+# Install dependencies
 npm install
 ```
 
-### 3. Obtener API Key de Google AI
+### 3. Get Google AI API Key
 
-1. Ve a [Google AI Studio](https://ai.google.dev/)
-2. Crea una nueva API key
-3. Cópiala en el archivo `backend/.env`
+1. Go to [Google AI Studio](https://ai.google.dev/)
+2. Create a new API key
+3. Copy it to the `backend/.env` file
 
-## 🎯 Ejecución
+## 🎯 Running the Application
 
-### Backend
+### Development Mode (Both services)
+
+```bash
+# Start both backend and frontend together
+npm run dev
+```
+
+### Individual Services
+
+```bash
+# Backend only
+npm run dev:backend
+
+# Frontend only
+npm run dev:frontend
+```
+
+### Manual Start
+
+### Manual Start
+
+#### Backend
 
 ```bash
 cd backend
 npx tsx src/index.ts
 ```
 
-El servidor estará disponible en: `http://localhost:3400`
+Server will be available at: `http://localhost:3400`
 
-### Frontend
+#### Frontend
 
 ```bash
 cd my-angular-chat-ui
 ng serve
 ```
 
-La aplicación estará disponible en: `http://localhost:4200`
+Application will be available at: `http://localhost:4200`
 
-## 📋 Funcionalidades
+## 📋 Features
 
-- ✅ Chat conversacional con IA
-- ✅ Consulta de estado de órdenes
-- ✅ Interfaz moderna con Kendo UI
-- ✅ API REST con Express
-- ✅ Integración con Google Gemini
+- ✅ Conversational AI chat
+- ✅ Order status inquiries
+- ✅ Modern UI with Kendo components
+- ✅ REST API with Express
+- ✅ Google Gemini integration
 
-## 🛠️ Desarrollo
+## 🛠️ Development
 
-### Estructura del Proyecto
+### Project Structure
 
 ```
 my-agentic-app/
-├── backend/                 # Servidor Node.js + Genkit
+├── backend/                 # Node.js + Genkit server
 │   ├── src/
-│   │   └── index.ts        # Configuración de Genkit y Express
-│   ├── .env.example        # Variables de entorno de ejemplo
+│   │   ├── index.ts        # Main entry point
+│   │   ├── server.ts       # Express configuration
+│   │   ├── genkit.ts       # Genkit and AI logic
+│   │   ├── routes/         # API routes
+│   │   └── types/          # TypeScript types
+│   ├── .env.example        # Environment variables example
 │   └── package.json
-└── my-angular-chat-ui/     # Aplicación Angular
+└── my-angular-chat-ui/     # Angular application
     ├── src/
     │   └── app/
-    │       ├── app.ts      # Componente principal
-    │       └── services/   # Servicios Angular
+    │       ├── app.ts      # Main component
+    │       └── services/   # Angular services
     └── package.json
 ```
 
 ### API Endpoints
 
-- `POST /api/flows/orderSupportFlow` - Enviar mensaje al agente IA
-- `GET /health` - Health check del servidor
+- `POST /api/flows/orderSupportFlow` - Send message to AI agent
+- `GET /health` - Server health check
 
-## 📝 Notas
+## 📝 Notes
 
-- El archivo `.env` contiene información sensible y no debe ser commiteado
-- El proyecto incluye herramientas de Genkit para desarrollo y debugging
-- CORS está configurado para desarrollo local
-
+- The `.env` file contains sensitive information and should not be committed
+- The project includes Genkit tools for development and debugging
+- CORS is configured for local development

@@ -1,0 +1,13 @@
+{
+  "name": "my-agentic-app",
+  "version": "1.0.0",
+  "description": "AI chat application with Angular and Genkit",
+  "scripts": {
+    "dev": "npm run dev:backend & npm run dev:frontend",
+    "dev:backend": "cd backend && npx tsx src/index.ts",
+    "dev:frontend": "cd my-angular-chat-ui && ng serve --port 4201",
+    "install:all": "cd backend && npm install && cd ../my-angular-chat-ui && npm install",
+    "setup": "npm run install:all && cd backend && cp .env.example .env"
+  },
+  "private": true
+}

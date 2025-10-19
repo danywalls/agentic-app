@@ -36,24 +36,20 @@ export class AppComponent {
       const newResponse = this.agentResponse();
       if (newResponse) {
         this.messages.update((current) => [...current, newResponse]);
-        // Reset the response signal after adding the message
         this.genkitService.resetResponse();
       }
     });
   }
 
   public onSendMessage(event: SendMessageEvent): void {
-    // Create the message object for the chat
     const message: Message = {
       author: this.user,
       text: event.message.text,
       timestamp: new Date()
     };
     
-    // Add user message first
     this.messages.update((current) => [...current, message]);
     
-    // Send message to service
     const messageText = event.message.text ?? '';
     if (messageText.trim()) {
       this.genkitService.sendMessage(messageText);
