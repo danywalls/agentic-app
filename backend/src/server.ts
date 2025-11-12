@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import flowsRouter from "./routes/flows.js";
-import healthRouter from "./routes/health.js";
+import flowsRouter from "./routes/flows";
+import healthRouter from "./routes/health";
 
 const app = express();
 const PORT = process.env.PORT || 3400;
@@ -24,6 +24,9 @@ app.use('/health', healthRouter);
 export function startServer() {
   return new Promise<void>((resolve) => {
     app.listen(PORT, () => {
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
+      console.log(`📊 Health check: http://localhost:${PORT}/health`);
+      console.log(`🤖 API endpoint: http://localhost:${PORT}/api/flows`);
       resolve();
     });
   });

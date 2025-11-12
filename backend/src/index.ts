@@ -1,5 +1,5 @@
-import "./genkit.js";
-import { startServer } from "./server.js";
+import "./genkit";
+import { startServer } from "./server";
 
 async function main() {
   try {

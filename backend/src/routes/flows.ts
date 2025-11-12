@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { orderSupportFlow } from "../genkit.js";
-import type { FlowRequest, FlowResponse, ErrorResponse } from "../types/api.js";
+import { orderSupportFlow } from "../genkit";
+import type { FlowRequest, FlowResponse, ErrorResponse } from "../types/api";
 
 const router = Router();
 
