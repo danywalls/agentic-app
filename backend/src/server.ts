@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
     res.send("genkit with express");
 });
 
-app.post("/orderFlow", jsonParser, async (req, res) => {
+app.post("/order-flow", jsonParser, async (req, res) => {
     try {
         console.log(req.body);
         const response = await orderSupportFlow(req.body.data);

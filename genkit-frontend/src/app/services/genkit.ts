@@ -33,7 +33,7 @@ export class GenkitService {
 
     const payload = { data: text };
 
-    this.http.post(`${environment.API}/orderFlow`, payload, { responseType: 'text' })
+    this.http.post(`${environment.API}/order-flow`, payload, { responseType: 'text' })
       .pipe(
         catchError(() => {
 
