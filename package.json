@@ -2,11 +2,18 @@
   "name": "agentic-app",
   "version": "1.0.0",
   "description": "This project is an AI-powered order support application built with Google's Genkit and Angular. It demonstrates how to build an agentic workflow that can assist users with checking their order status.",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "genkit-frontend"
+  ],
   "scripts": {
     "start": "npm run backend & npm run frontend",
-    "backend": "cd backend && npm run dev",
-    "frontend": "cd genkit-frontend && ng serve"
+    "backend": "npm run dev -w backend",
+    "frontend": "npm run start -w genkit-frontend",
+    "build": "npm run build -w genkit-frontend",
+    "test": "npm run test -w genkit-frontend",
+    "watch": "npm run watch -w genkit-frontend"
   },
   "repository": {
     "type": "git",
