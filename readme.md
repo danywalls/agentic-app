@@ -1,3 +1,6 @@
+> [!NOTE]
+> This repository contains the source code for the article: **[Build Agentic Apps with Angular, Genkit and Kendo UI](https://www.telerik.com/blogs/build-agentic-apps-angular-genkit-kendo-ui-part-1)** originally published on Telerik Blogs.
+
 # Agentic App
 
 This project is an AI-powered order support application built with Google's Genkit and Angular. It demonstrates how to build an agentic workflow that can assist users with checking their order status.
@@ -60,3 +63,6 @@ The application consists of a backend service powered by Genkit and a frontend c
 1. Open the chat interface in the frontend.
 2. Ask about an order, for example: "Where is my order 123-456?"
 3. The agent will use the `getOrderStatus` tool to find the information and respond to you.
+
+---
+Stay connected: [@danywalls](https://twitter.com/danywalls)
