@@ -1,7 +1,23 @@
 > [!NOTE]
-> This repository contains the source code for the article: **[Build Agentic Apps with Angular, Genkit and Kendo UI](https://www.telerik.com/blogs/build-agentic-apps-angular-genkit-kendo-ui-part-1)** originally published on [Telerik Blogs](https://www.telerik.com/blogs).
+> This repository contains the source code for the article: **[Build Agentic Apps (Angular & Genkit) Part 1 & 2](https://www.telerik.com/blogs/build-agentic-apps-angular-genkit-kendo-ui-part-1)** originally published on [Telerik Blogs](https://www.telerik.com/blogs).
 
-# Build Agentic Apps with Angular, Genkit and Kendo UI
+# Build Agentic Apps (Angular & Genkit) Part 1 & 2
+
+## Project Summary
+This project demonstrates how to build an agentic Angular application using **Google Genkit**, **Gemini**, and **Kendo UI**. It features an AI-powered order support system that dynamiclly retrieves order status information.
+
+## How to Run
+### Prerequisites
+* Node.js (v20+)
+* A Google AI API Key
+
+### Installation
+1. `npm install -g genkit-cli`
+2. `npm install`
+
+### Running
+1. `genkit start -- npx tsx --watch src/index.ts`
+2. Open Developer UI at [http://localhost:4001](http://localhost:4001)
 
 ## Project Summary
 This project demonstrates how to build an agentic Angular application using **Google Genkit**, **Gemini**, and **Kendo UI**. 
