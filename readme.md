@@ -20,6 +20,22 @@ This project demonstrates how to build an agentic Angular application using **Go
 2. Open Developer UI at [http://localhost:4001](http://localhost:4001)
 
 ## Project Summary
+This project demonstrates how to build an agentic Angular application using **Google Genkit**, **Gemini**, and **Kendo UI**. It features an AI-powered order support system that dynamically retrieves order status information.
+
+## How to Run
+### Prerequisites
+* Node.js (v20+)
+* A Google AI API Key
+
+### Installation
+1. `npm install -g genkit-cli`
+2. `npm install`
+
+### Running
+1. `genkit start -- npx tsx --watch src/index.ts`
+2. Open Developer UI at [http://localhost:4001](http://localhost:4001)
+
+## Project Summary
 This project demonstrates how to build an agentic Angular application using **Google Genkit**, **Gemini**, and **Kendo UI**. It features an AI-powered order support system that dynamiclly retrieves order status information.
 
 ## How to Run
