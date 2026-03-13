@@ -3,6 +3,32 @@
 
 # Build Agentic Apps with Angular, Genkit and Kendo UI
 
+## Project Summary
+This project demonstrates how to build an agentic Angular application using **Google Genkit**, **Gemini**, and **Kendo UI**. 
+It features an AI-powered order support system where an agent uses flows and tools to retrieve order status information dynamically.
+
+## How to Run
+### Prerequisites
+* Node.js (v20+)
+* A Google AI API Key
+
+### Installation
+1. Install Genkit CLI:
+   ```bash
+   npm install -g genkit-cli
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Project
+1. Start the Genkit backend:
+   ```bash
+   genkit start -- npx tsx --watch src/index.ts
+   ```
+2. Open the Genkit Developer UI at [http://localhost:4001](http://localhost:4001) to interact with the models and tools.
+
 This project is an AI-powered order support application built with Google's Genkit and Angular. It demonstrates how to build an agentic workflow that can assist users with checking their order status.
 
 ## Overview
